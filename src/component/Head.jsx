@@ -17,7 +17,7 @@ const Head = () => {
                 <img src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt="" className="w-28" />
             </div>
             <div className="w-5/12 flex items-center">
-                <input type="text" placeholder="search" className="w-full outline-none ps-3 pr-7  border-gray-300 border py-2 rounded-l-2xl" />
+                <input type="text" placeholder="Search..." className="w-full outline-none ps-3 pr-7  border-gray-300 border py-2 rounded-l-2xl" />
                 <button
                     className=" border-gray-300 border rounded-r-2xl  py-2 px-3 bg-gray-100 h-full"
                 >
@@ -28,7 +28,7 @@ const Head = () => {
 
             </div>
             <div>
-                <FaRegUser />
+                <FaRegUser className="cursor-pointer" />
             </div>
         </div>
     )

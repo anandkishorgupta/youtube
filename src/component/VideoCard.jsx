@@ -5,12 +5,11 @@ const VideoCard = ({ info }) => {
         return <div>Loading...</div>;
     }
 
-    console.log(info)
     const { snippet, statistics } = info
     const { channelTitle, title, thumbnails } = snippet
     return (
-        <div className=" p-2 m-2 w-80 cursor-pointer">
-            <img src={thumbnails.medium.url} alt="thumbnail" className="rounded-lg " />
+        <div className=" p-2 m-2 w-[400px] cursor-pointer">
+            <img src={thumbnails.medium.url} alt="thumbnail" className="rounded-lg w-full object-cover" />
             <ul>
                 <li className="font-bold py-1">{title}</li>
                 <li>{channelTitle}</li>

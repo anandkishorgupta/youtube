@@ -3,6 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
@@ -13,7 +14,6 @@ const Head = () => {
     const [suggestion, setSuggestion] = useState([])
     const [showSuggestion, setShowSuggestion] = useState(false)
     const searchCache = useSelector((state) => state.search)
-
     useEffect(() => {
         // make an api call after every key press
         // but if the difference between 2 API calls is <200ms decline the api call>
@@ -47,9 +47,13 @@ const Head = () => {
     }
     return (
         <div className="flex justify-between px-5 items-center fixed top-0 w-full bg-white shadow-sm z-10 ">
-            <div className="flex items-center">
-                <RxHamburgerMenu onClick={toggleMenuHandler} className="cursor-pointer" />
-                <img src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt="" className="w-28" />
+            <div className="flex items-center gap-x-4">
+                <RxHamburgerMenu onClick={toggleMenuHandler} className="cursor-pointer"  size={24}/>
+
+                <Link to={"/"}>
+                    <img src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt="" className="w-28"
+                    />
+                </Link>
             </div>
             {/* search */}
             <div className="relative w-5/12 flex items-center">

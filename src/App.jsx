@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import { BrowserRouter, RouterProvider, createBrowserRouter } from "react-router-dom"
 import Body from "./component/Body"
 import Head from "./component/Head"
 import MainContainer from "./component/MainContainer"
@@ -24,7 +24,9 @@ const App = () => {
   ])
   return (
     <div>
-      <Head />
+      <BrowserRouter>
+        <Head />
+      </BrowserRouter>
       <RouterProvider router={appRouter} />
     </div>
   )
